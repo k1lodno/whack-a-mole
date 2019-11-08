@@ -11,7 +11,10 @@ public class MoleManager : MonoBehaviour
     public Mole mole;
     public Heart heart;
 
-    public Cell[,] cells = new Cell[3, 3];
+    public int mapHeight = 3;
+    public int mapWidth = 3;
+
+    public Cell[,] cells;
 
     private float timer;
     public float spawnTimeLimit = 0.9f;
@@ -22,6 +25,7 @@ public class MoleManager : MonoBehaviour
 
     void Start()
     {
+        cells = new Cell[mapWidth, mapHeight]; 
         offset = cell.GetComponent<Renderer>().bounds.size;
         CreateCells();
         StartCoroutine(CreateMole());
@@ -61,7 +65,7 @@ public class MoleManager : MonoBehaviour
         while (curHealth.health > 0)
         {
             x = Random.Range(0, cells.GetLength(0));
-            y = Random.Range(0, cells.GetLength(0));
+            y = Random.Range(0, cells.GetLength(1));
 
             if (!cells[x, y].GetComponentInChildren<Mole>() && !cells[x, y].GetComponentInChildren<Heart>())
             {
@@ -82,7 +86,7 @@ public class MoleManager : MonoBehaviour
         {
 
             x = Random.Range(0, cells.GetLength(0));
-            y = Random.Range(0, cells.GetLength(0));
+            y = Random.Range(0, cells.GetLength(1));
 
             if (!cells[x, y].GetComponentInChildren<Mole>() && !cells[x, y].GetComponentInChildren<Heart>())
             {

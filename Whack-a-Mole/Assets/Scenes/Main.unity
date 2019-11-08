@@ -568,6 +568,8 @@ MonoBehaviour:
   cell: {fileID: 4182253996034299006, guid: b504f64fc65a75647a08cbf4de64cda3, type: 3}
   mole: {fileID: 3957678385284626275, guid: 565172a13c9f97e4a92e83e63f149f2a, type: 3}
   heart: {fileID: 2027719283862998676, guid: 788a3e3c690a0e5468305c57e433001e, type: 3}
+  mapHeight: 3
+  mapWidth: 3
   spawnTimeLimit: 0.9
 --- !u!20 &519420031
 Camera:
