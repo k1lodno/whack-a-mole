@@ -10,12 +10,6 @@ public class HUD : MonoBehaviour
     public int hitCount = 0;
     public Text scoreText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        scoreText = GameObject.Find("ScoreText").GetComponent<Text>(); ; 
-    }
-
     // Update is called once per frame
     void Update()
     {

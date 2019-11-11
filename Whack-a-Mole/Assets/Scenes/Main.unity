@@ -916,7 +916,7 @@ MonoBehaviour:
   mPanelGameOver: {fileID: 2003413880}
   mTextGameOver: {fileID: 1949930357}
   hitCount: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 711298906}
 --- !u!1 &1295871812
 GameObject:
   m_ObjectHideFlags: 0
